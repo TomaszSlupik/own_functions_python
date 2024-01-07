@@ -64,3 +64,54 @@ print(filter_ge_6(twoCheck))
 
 print('---')
 
+# funkcja, która zwróci liczbę obiektów typu str w obiekcie iterowalnym (list, tuple, set)
+
+firstStr = ['p', 2, 4.3, None]
+secondStr = {'p', 2, 4.3, True, 'True', None}
+
+def count_str (myStr):
+    total = 0
+    for checkStr in myStr:
+        if isinstance(checkStr, str):
+            total += 1
+    return total
+
+print(count_str(firstStr)) 
+print(count_str(secondStr))
+
+print('---')
+
+# funkcja która zwróci liczbę obiektów typu str o długości powyżej 2 znaków w obiekcie iterowalnym (lista, tuple, set)
+thirdStr = [1, '#hello', '', 'python', 'go']
+fourthStr = [1, 2, 3, 'python']
+
+def count_strNext(check):
+    total = 0
+    for myString in check:
+        if isinstance(myString, str):
+                total += 1
+    if total > 2:
+         return total
+    else:
+        return f"Brak liczby obiektów typu str o długości powyżej 2 znaków w obiekcie iterowalnym"
+    
+print(count_strNext(thirdStr))
+print(count_strNext(fourthStr))
+
+print('---')
+
+# funkcja remove_duplicates(), która usunie duplikaty z listy (kolejność elementów nie musi być zachowana).
+one_duple = [1, 5, 3, 2, 2, 4, 2, 4]
+two_duple = [1, 1, 1, 1]
+
+
+def remove_duplicates(inputList):
+     uniqueList = list(set(inputList))
+     return uniqueList
+
+print(remove_duplicates(one_duple))
+print(remove_duplicates(two_duple))
+
+print('---')
+
+
