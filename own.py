@@ -114,4 +114,26 @@ print(remove_duplicates(two_duple))
 
 print('---')
 
+# funkcja is_distinct(), która sprawdzi, czy lista zawiera unikalne wartości.
+# Użyłem porównania długości listy z długością zbioru które są unikalne zawsze
+isUniqueListOne = [1, 2, 3]
+isUniqueListTwo = [1, 2, 3, 3]
+
+def is_distinct(isUnique):
+    return len (isUnique) == len(set(isUnique))
+
+print(is_distinct(isUniqueListOne))
+print(is_distinct(isUniqueListTwo))
+
+print('---')
+
+kayak = 'kajak'
+ocean = 'ocena'
+
+def is_palindrome(strText):
+    check_text = [check for check in strText]
+    return check_text == check_text.reverse()
+
+is_palindrome(kayak)
+is_palindrome(ocean)
 
